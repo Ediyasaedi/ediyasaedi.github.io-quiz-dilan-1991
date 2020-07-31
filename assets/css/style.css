@@ -94,12 +94,13 @@ textarea {
   background-color: #fff;
   margin: 0 auto;
   width: 60%;
+  margin-top: 100px;
 }
 
 #topic-list > div{
   display: inline-block;
   margin: 50px;
-  background-color: aqua;
+  background-color: #46e2c0;
   padding: 50px;
   border: 1px solid black;
   border-radius: 5px;
@@ -223,5 +224,35 @@ footer {
   border: 1px solid #44b34a;
   border-radius: 10px;
 }
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 100%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.containercard {
+  padding: 2px 16px;
+}
+
+.beige-square {
+  background-color: beige;
+  margin: 0 auto;
+  margin-top: 150px;
+  width: 40%;
+}
+
+.white-square {
+  background-color: whitesmoke;
+  margin: 0 auto;
+  position: sticky;
+}
+
 
 

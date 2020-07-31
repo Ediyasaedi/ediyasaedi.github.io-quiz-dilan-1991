@@ -9,11 +9,15 @@
 </head>
 
 <body>
-    <p>
-        Halo <strong id="name"></strong>,
-        <br>
-        Silahkan memilih topik apa yang akan kamu kerjakan:
-    </p>
+    <div class="card white-square">
+        <div class="containercard">
+            <p>
+                Halo <strong id="name"></strong>,
+                <br>
+                Silahkan memilih topik apa yang akan kamu kerjakan:
+            </p>
+        </div>
+    </div>
 
     <div id="topic-list">
         <div class="img-container">
@@ -22,7 +26,7 @@
             </a>
         </div>
 
-        <div>
+        <div class="img-container">
             <a href="ipsquestions.html">
                 <img src="assets/img/ips-logo.png">
             </a>
@@ -37,7 +41,14 @@
             <input type="button" onclick="location.href='index.html';" class="btn red" value="Keluar" />
         <!-- </div> -->
     </div>
-   
+    <script src="assets/scripts/index.js"></script>
+    <script type="text/javascript">
+        function codeAddress() {
+            var x = localStorage.getItem("userName");
+            alert('Selamat mengerjakan ' + x);
+        }
+        window.onload = codeAddress;
+    </script>
 </body>
 
 </html>

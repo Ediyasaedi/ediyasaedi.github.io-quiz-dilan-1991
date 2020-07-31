@@ -72,10 +72,19 @@ function submitQuiz() {
     }
 
 // show score as "score/possible score"
-    var showScore = "Your Score: " + calcScore +"/" + questionCounter;
+    var showScore = "Skor kamu: " + calcScore +"/" + questionCounter;
 // if 4/4, "perfect score!"
-    if (calcScore === questionCounter) {
-        showScore = showScore + "&nbsp; <strong>Perfect Score!</strong>"
+    if (calcScore >= 9) {
+        showScore = showScore + "&nbsp; <strong>Kamu bisa wakilin sekolah buat olimpiade nih!</strong>"
+    };
+    if (calcScore < 9 && calcScore >= 7) {
+        showScore = showScore + "&nbsp; <strong>Bagus, tapi kamu masih kalah sama Nandan</strong>"
+    };
+    if (calcScore < 7 && calcScore >= 5) {
+        showScore = showScore + "&nbsp; <strong>Kamu harus belajar lebih keras lagi</strong>"
+    };
+    if (calcScore < 5) {
+        showScore = showScore + "&nbsp; <strong>Terlalu banyak ngurus geng motor nih</strong>"
     };
     document.getElementById('userScore').innerHTML = showScore;
 }
@@ -87,3 +96,24 @@ $('#submitButton').click(function() {
 });
 
 });
+
+function getName() {
+    return localStorage.getItem("userName");
+}
+
+function updateHTML() {
+    var name = getName();
+    // document.getElementById("greeting").innerHTML = "Hello, " + name + "! Welcome!";
+    document.getElementById("name").value = name;
+}
+
+function myFunction() {
+    // Gets input value
+    var name = document.getElementById("loginname").value;
+
+    // Saves data to retrieve later
+    localStorage.setItem("userName", name);
+
+    // Updates HTML
+    updateHTML();
+}

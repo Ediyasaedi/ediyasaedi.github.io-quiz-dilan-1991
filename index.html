@@ -9,19 +9,44 @@
 </head>
 
 <body>
-    <div class="container-home">
-        <h1>SELAMAT DATANG</h1>
-        <h3>di Kuis Dilan 1991</h3>
-        <p>Terjebak Dalam Romansa Masa SMA</p>
-            <form method="post" action="#">
-                <label><strong>Nama Peserta:</strong>
-                    <input name="name" id="login-name" type="text" placeholder="Isikan Nama Kamu" value="" required="">
-                </label>
-                <button>
-                    <a href="group-select.html" id="login">Mulai</a>
-                </button>
-                
-            </form>
+    <div class="card beige-square">
+        <div class="containercard">
+            <h1>SELAMAT DATANG</h1>
+            <h3>di Kuis Dilan 1991</h3>
+            <p>Terjebak Dalam Romansa Masa SMA</p>
+                <form method="post" action="#">
+                    <label> Nama Peserta: 
+                        <input name="name" id="loginname" type="text" placeholder="Isikan Nama Kamu" value="" required="">
+                    </label>
+                    <button onclick="myFunction()">
+                        <a href="group-select.html">Mulai</a> 
+                    </button>
+                    
+                </form>
+        </div>
     </div>
-
+    <script src="assets/scripts/index.js"></script>
+    <!-- <script>
+        function getName() {
+            return localStorage.getItem("userName");
+        }
+  
+    function updateHTML() {
+        var name = getName();
+        // document.getElementById("greeting").innerHTML = "Hello, " + name + "! Welcome!";
+        document.getElementById("name").innerHTML = name;
+    }
+    
+    function myFunction() {
+        // Gets input value
+        var name = document.getElementById("loginname").value;
+    
+        // Saves data to retrieve later
+        localStorage.setItem("userName", name);
+        
+        // Updates HTML
+        updateHTML();
+    }
+    </script> -->
+</body>
 </html>
